@@ -1,0 +1,11 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Exports
+export.cfg
+export_presets.cfg
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
