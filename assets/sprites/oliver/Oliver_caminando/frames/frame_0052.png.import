@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhtcvts864tgk"
-path="res://.godot/imported/mapple.png-5241e9be7507418b6ecdde979d33dff4.ctex"
+uid="uid://bt8dpewqnoicl"
+path="res://.godot/imported/frame_0052.png-ca62df0391891fb2ce03d16598d15149.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mapple/mapple.png"
-dest_files=["res://.godot/imported/mapple.png-5241e9be7507418b6ecdde979d33dff4.ctex"]
+source_file="res://Oliver/Oliver_caminando/frames/frame_0052.png"
+dest_files=["res://.godot/imported/frame_0052.png-ca62df0391891fb2ce03d16598d15149.ctex"]
 
 [params]
 
