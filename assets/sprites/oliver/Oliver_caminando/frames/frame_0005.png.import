@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6g5c6ht6r4wt"
-path="res://.godot/imported/frame_0005.png-10b52c8d06edba93f5af182c84ef949a.ctex"
+path="res://.godot/imported/frame_0005.png-03fdc5c999692d627f54216bd2437c50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Oliver/Oliver_caminando/frames/frame_0005.png"
-dest_files=["res://.godot/imported/frame_0005.png-10b52c8d06edba93f5af182c84ef949a.ctex"]
+source_file="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0005.png"
+dest_files=["res://.godot/imported/frame_0005.png-03fdc5c999692d627f54216bd2437c50.ctex"]
 
 [params]
 
