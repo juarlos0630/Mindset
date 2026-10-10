@@ -4673,6 +4673,9 @@ position = Vector2(116.00001, -123)
 scale = Vector2(0.4511111, 0.39777777)
 sprite_frames = SubResource("SpriteFrames_iyrkg")
 
+[node name="Timer" type="Timer" parent="Oliver" unique_id=82023241]
+one_shot = true
+
 [node name="Suelo" type="StaticBody2D" parent="." unique_id=1600783001]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo" unique_id=1379317626]

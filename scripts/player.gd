@@ -3,6 +3,16 @@ extends CharacterBody2D
 const SPEED = 250.0
 const JUMP_VELOCITY = -400.0
 
+#Dash variables
+const dash_speed = 900.0
+const dash_duration = 0.15
+const dash_cooldown = 0.5
+var is_dashing = false
+var can_dash = true
+var dash_timer = 0.0 
+var dash_cooldown_timer = 0.0
+var dash_direction = 1.0
+
 var time_passed = 0.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -40,6 +50,29 @@ func _process(delta):
 			deactivate_bullet_time()
 
 func _physics_process(delta):
+	#Cooldown del dash
+	if dash_cooldown_timer > 0.0:
+		dash_cooldown_timer-=delta
+		
+	#Recargar el dash al tocar el suelo
+	if is_on_floor():
+		can_dash = true
+	
+	
+	#Iniciar dash
+	var can_start_dash = can_dash and dash_cooldown_timer <= 0.0 and not is_attacking and not is_dashing
+	if Input.is_action_just_pressed("dash") and can_start_dash:
+		start_dash()
+	
+	if is_dashing:
+		dash_timer -= delta
+		velocity.x = dash_direction * dash_speed
+		velocity.y = 0.0
+		if dash_timer <= 0.0:
+			end_dash()
+		move_and_slide()
+		return
+		
 	# Gravedad
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -91,6 +124,32 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+#Dash
+func start_dash():
+	var input_dir = Input.get_axis("ui_left", "ui_right")
+	if input_dir != 0:
+		dash_direction = sign(input_dir)
+	else:
+		dash_direction = -1.0 if animated_sprite.flip_h else 1.0
+ 
+	is_dashing = true
+	can_dash = false
+	dash_timer = dash_duration
+	dash_cooldown_timer = dash_cooldown
+ 
+	# Orientar sprites y Mapple hacia el dash
+	animated_sprite.flip_h = dash_direction < 0
+	mapple.flip_h = dash_direction < 0
+	target_mapple_x = animated_sprite.position.x - (120.0 * dash_direction)
+ 
+	# Solo reproduce "dash" si ya existe esa animación en el SpriteFrames
+	if animated_sprite.sprite_frames.has_animation("dash"):
+		animated_sprite.play("dash")
+ 
+func end_dash():
+	is_dashing = false
+	velocity.x = dash_direction * SPEED  # entrega suave al movimiento normal
+
 func _on_animation_finished():
 	if animated_sprite.animation == "attack":
 		is_attacking = false
@@ -105,3 +164,6 @@ func deactivate_bullet_time():
 	is_time_slowed = false
 	Engine.time_scale = 1.0 
 	mapple.visible = true
+	
+
+	
