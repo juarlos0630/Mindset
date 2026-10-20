@@ -3,27 +3,16 @@
 [ext_resource type="Script" uid="uid://ch0gnuawrtxw8" path="res://scripts/player.gd" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://bilabrgjj2nwu" path="res://assets/sprites/oliveer.png" id="3_0hol4"]
 [ext_resource type="Texture2D" uid="uid://dp0g820d28ai4" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0002.png" id="4_1epgm"]
-[ext_resource type="Texture2D" uid="uid://bva6krc4bo6rl" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0002.png" id="4_m4o51"]
-[ext_resource type="Texture2D" uid="uid://bguu7f3u8h4f3" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0003.png" id="5_152kg"]
+[ext_resource type="Texture2D" uid="uid://bilabrgjj2nwu" path="res://assets/sprites/oliver/oliver_idle.png" id="4_8lcmr"]
 [ext_resource type="Texture2D" uid="uid://bhtcvts864tgk" path="res://assets/sprites/mapple/mapple.png" id="5_d21ai"]
-[ext_resource type="Texture2D" uid="uid://cla4kswmhy8q7" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0003.png" id="5_jp61a"]
 [ext_resource type="Texture2D" uid="uid://b63pr3loljbhx" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0004.png" id="6_esrwe"]
-[ext_resource type="Texture2D" uid="uid://c6mmugcb6iqpa" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0004.png" id="6_r4e17"]
-[ext_resource type="Texture2D" uid="uid://bm6h87ju1jj4s" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0005.png" id="7_4b36k"]
 [ext_resource type="Texture2D" uid="uid://d14h51mtmr6i7" path="res://scenes/Nivel3/fondo_nivel3.jpg" id="7_d21ai"]
-[ext_resource type="Texture2D" uid="uid://6g5c6ht6r4wt" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0005.png" id="7_y57op"]
 [ext_resource type="Texture2D" uid="uid://cyntg6edb8ya8" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0006.png" id="8_1v8b0"]
-[ext_resource type="Texture2D" uid="uid://bxith6hb3nvl0" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0006.png" id="8_mlv25"]
 [ext_resource type="Texture2D" uid="uid://dhjcu71lx8si3" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0007.png" id="9_683hg"]
-[ext_resource type="Texture2D" uid="uid://dk6jh2y1r6ewg" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0007.png" id="9_a82wo"]
-[ext_resource type="Texture2D" uid="uid://dqdyd0no20kod" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0008.png" id="10_gdvew"]
 [ext_resource type="Texture2D" uid="uid://0m1pe4c530wu" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0008.png" id="10_ow8of"]
 [ext_resource type="Texture2D" uid="uid://ds7hhsg27jr06" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0009.png" id="11_hj4tt"]
-[ext_resource type="Texture2D" uid="uid://b86i4ytytvdmo" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0009.png" id="11_kjtvk"]
 [ext_resource type="Texture2D" uid="uid://daitl4hq51t6x" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0010.png" id="12_kqx4a"]
-[ext_resource type="Texture2D" uid="uid://dqg7piw3aaud" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0010.png" id="12_xrs0c"]
 [ext_resource type="Texture2D" uid="uid://omug60to6gd3" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0011.png" id="13_pfcs8"]
-[ext_resource type="Texture2D" uid="uid://m5418obnodwx" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0011.png" id="13_xljpf"]
 [ext_resource type="Texture2D" uid="uid://pq4yjpdkbvx1" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0012.png" id="14_50d7c"]
 [ext_resource type="Texture2D" uid="uid://c2o7pfo7cp7v7" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0012.png" id="14_j4bwh"]
 [ext_resource type="Texture2D" uid="uid://5g44jadilncv" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0013.png" id="15_ksmap"]
@@ -124,6 +113,8 @@
 [ext_resource type="Texture2D" uid="uid://vm3hwhhjtwrd" path="res://assets/sprites/oliver/Oliver_caminando/frames/frame_0060.png" id="62_m4o51"]
 [ext_resource type="Texture2D" uid="uid://cx3g4sux4rayh" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0061.png" id="63_smy15"]
 [ext_resource type="Texture2D" uid="uid://xfa0yi1s8dbm" path="res://assets/sprites/oliver/Oliver_saltando/frames/sin título_0062.png" id="64_d51im"]
+[ext_resource type="Texture2D" uid="uid://cv2cr3hkpg23b" path="res://assets/sprites/jefe_3/jefe_3_idle.png" id="125_jp61a"]
+[ext_resource type="Script" uid="uid://bmuooyhkwqnkl" path="res://scripts/Conductor.gd" id="126_4b36k"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rj586"]
 
@@ -4224,14 +4215,17 @@ animations = [{
 "name": &"attack",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0hol4")
+}],
 "loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_0hol4")
+"texture": ExtResource("4_8lcmr")
 }],
 "loop": 1,
 "name": &"idle",
@@ -4239,16 +4233,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_m4o51")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_jp61a")
-}, {
-"duration": 1.0,
 "texture": ExtResource("6_esrwe")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_4b36k")
 }, {
 "duration": 1.0,
 "texture": ExtResource("8_1v8b0")
@@ -4430,33 +4415,6 @@ animations = [{
 "texture": ExtResource("4_1epgm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_152kg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_r4e17")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_y57op")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_mlv25")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_a82wo")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_gdvew")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_kjtvk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_xrs0c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_xljpf")
-}, {
-"duration": 1.0,
 "texture": ExtResource("14_j4bwh")
 }, {
 "duration": 1.0,
@@ -4629,6 +4587,22 @@ size = Vector2(61, 651)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iyrkg"]
 size = Vector2(1197, 20)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_kddjp"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("125_jp61a")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D" unique_id=1762314595]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=991145300]
@@ -4648,8 +4622,8 @@ position = Vector2(516, 321.25)
 scale = Vector2(0.8352272, 0.84960943)
 texture = ExtResource("7_d21ai")
 
-[node name="Oliver" type="CharacterBody2D" parent="." unique_id=983630767]
-position = Vector2(120, 304)
+[node name="Oliver" type="CharacterBody2D" parent="." unique_id=983630767 groups=["player"]]
+position = Vector2(786, 473)
 script = ExtResource("2_epypp")
 metadata/_edit_group_ = true
 
@@ -4664,9 +4638,7 @@ limit_bottom = 643
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Oliver" unique_id=87186640]
 sprite_frames = SubResource("SpriteFrames_xgson")
-animation = &"jump"
-frame = 40
-frame_progress = 0.67586935
+animation = &"attack"
 
 [node name="Mapple" type="AnimatedSprite2D" parent="Oliver" unique_id=1846005118]
 position = Vector2(116.00001, -123)
@@ -4693,3 +4665,19 @@ shape = SubResource("RectangleShape2D_xgson")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Techo" unique_id=1258827847]
 position = Vector2(509.5, -15)
 shape = SubResource("RectangleShape2D_iyrkg")
+
+[node name="Conductor" type="CharacterBody2D" parent="." unique_id=1628558181 groups=["jefe"]]
+script = ExtResource("126_4b36k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conductor" unique_id=100871496]
+position = Vector2(84, 463)
+shape = SubResource("CapsuleShape2D_5onyk")
+
+[node name="PuntoLanzamiento" type="Marker2D" parent="Conductor" unique_id=1462127008]
+position = Vector2(86, 464)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Conductor" unique_id=719608993]
+position = Vector2(57, 442)
+scale = Vector2(0.5, 0.48441926)
+sprite_frames = SubResource("SpriteFrames_kddjp")
+animation = &"idle"
