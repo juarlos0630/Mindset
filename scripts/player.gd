@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 250.0
-const JUMP_VELOCITY = -400.0
+@export var SPEED := 250.0
+@export var JUMP_VELOCITY := -400.0
 
 #Dash variables
 const dash_speed = 900.0
