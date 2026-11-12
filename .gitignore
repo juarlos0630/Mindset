@@ -10,7 +10,7 @@ builds/
 *.pck
 *.zip
 
-# Mono / C# (por si acaso)
+# Mono / C# (por las dudas)
 .mono/
 data_*/
 
