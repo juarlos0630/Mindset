@@ -82,7 +82,7 @@ func esta_mouse_sobre_sprite(sprite: Sprite2D, mouse_pos: Vector2) -> bool:
 func ejecutar_opcion() -> void:
 	match indice_actual:
 		0: # JUGAR -> Inicia la escena de City
-			get_tree().change_scene_to_file("res://City.tscn")
+			get_tree().change_scene_to_file("res://EscenaComic.tscn")
 		1: # CARGAR PARTIDA
 			print("Cargar partida seleccionado")
 		2: # OPCIONES

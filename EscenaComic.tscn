@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://lr8w7xjm4a0i"]
+
+[ext_resource type="Script" uid="uid://cm06csqhgg0i8" path="res://EscenaComic.gd" id="1_rmbsm"]
+[ext_resource type="Texture2D" uid="uid://b4aii7kr83366" path="res://assets/Comic/pagina_1.png" id="2_3wmel"]
+[ext_resource type="Texture2D" uid="uid://cc0ycierf3pns" path="res://assets/Comic/pagina_2.png" id="3_lxltd"]
+[ext_resource type="Texture2D" uid="uid://dk6ppx0lsjvnw" path="res://assets/Comic/pagina_3.png" id="4_icc5f"]
+[ext_resource type="Texture2D" uid="uid://o1tvugncymt2" path="res://assets/Comic/pagina_4.png" id="5_v7iy2"]
+[ext_resource type="Texture2D" uid="uid://dsfdru186wsl0" path="res://assets/Comic/pagina_5.png" id="6_yjgit"]
+[ext_resource type="Texture2D" uid="uid://b3jow7gavscd2" path="res://assets/Comic/pagina_6.png" id="7_0iubf"]
+
+[node name="EscenaComic" type="Control" unique_id=881315726]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rmbsm")
+paginas_comic = Array[Texture2D]([ExtResource("2_3wmel"), ExtResource("3_lxltd"), ExtResource("4_icc5f"), ExtResource("5_v7iy2"), ExtResource("6_yjgit"), ExtResource("7_0iubf")])
+ruta_siguiente_nivel = "uid://da0phjbs78xci"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=47257453]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=887030197]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
