@@ -22,6 +22,9 @@ var is_time_slowed = false
 var slow_motion_timer = 0.0
 const SLOW_MOTION_DURATION = 3.0
 
+var vida_oliver: int = 100
+var oliver_danado: bool = false
+
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var mapple = $Mapple
 
@@ -52,15 +55,14 @@ func _process(delta):
 func _physics_process(delta):
 	#Cooldown del dash
 	if dash_cooldown_timer > 0.0:
-		dash_cooldown_timer-=delta
+		dash_cooldown_timer -= delta
 		
 	#Recargar el dash al tocar el suelo
 	if is_on_floor():
 		can_dash = true
 	
-	
 	#Iniciar dash
-	var can_start_dash = can_dash and dash_cooldown_timer <= 0.0 and not is_attacking and not is_dashing
+	var can_start_dash = can_dash and dash_cooldown_timer <= 0.0 and not is_attacking and not is_dashing and not oliver_danado
 	if Input.is_action_just_pressed("dash") and can_start_dash:
 		start_dash()
 	
@@ -82,19 +84,18 @@ func _physics_process(delta):
 		if not is_time_slowed:
 			activate_bullet_time()
 
-	# Atacar
-	if Input.is_action_just_pressed("ui_select") and not is_attacking:
+	# Atacar (bloqueado brevemente mientras recibe daño)
+	if Input.is_action_just_pressed("ui_select") and not is_attacking and not oliver_danado:
 		is_attacking = true
 		animated_sprite.play("attack")
 
-	# Saltar
-	if Input.is_action_just_pressed("ui_up") and is_on_floor() and not is_attacking:
+	# Saltar (bloqueado brevemente mientras recibe daño)
+	if Input.is_action_just_pressed("ui_up") and is_on_floor() and not is_attacking and not oliver_danado:
 		velocity.y = JUMP_VELOCITY
-		animated_sprite.play("jump") #Aquí va la reproducción de la animación
+		animated_sprite.play("jump")
 
 	# Movimiento y estado de animación
-	# Movimiento y estado de animación
-	if not is_attacking:
+	if not is_attacking and not oliver_danado:
 		var direction = Input.get_axis("ui_left", "ui_right")
 		
 		if direction != 0:
@@ -109,7 +110,6 @@ func _physics_process(delta):
 			else:
 				animated_sprite.play("idle")
 		else:
-			# Si está en el aire (saltando o cayendo)
 			animated_sprite.play("jump")
 
 		# Actualizar orientación de los sprites y decirle a Mapple hacia dónde volar
@@ -121,6 +121,9 @@ func _physics_process(delta):
 			animated_sprite.flip_h = false
 			mapple.flip_h = false
 			target_mapple_x = animated_sprite.position.x - 120.0
+	elif oliver_danado:
+		# Frena suavemente durante el impacto sin cortar la animación "daño"
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
 
@@ -148,11 +151,13 @@ func start_dash():
  
 func end_dash():
 	is_dashing = false
-	velocity.x = dash_direction * SPEED  # entrega suave al movimiento normal
+	velocity.x = dash_direction * SPEED
 
 func _on_animation_finished():
 	if animated_sprite.animation == "attack":
 		is_attacking = false
+	elif animated_sprite.animation == "daño":
+		oliver_danado = false
 
 func activate_bullet_time():
 	is_time_slowed = true
@@ -165,5 +170,15 @@ func deactivate_bullet_time():
 	Engine.time_scale = 1.0 
 	mapple.visible = true
 	
-
-	
+#-------------------------------------------------------------------------------------------------------------------
+func recibir_dano(cantidad: int) -> void:
+	if oliver_danado or is_dashing:
+		return
+	oliver_danado = true
+	is_attacking = false
+	vida_oliver -= cantidad
+	animated_sprite.stop()
+	animated_sprite.play("daño")
+	# El parámetro "true" ignora el Bullet Time para que el aturdimiento siempre dure 0.45s reales
+	await get_tree().create_timer(0.45, true, false, true).timeout
+	oliver_danado = false
