@@ -84,6 +84,7 @@ func ejecutar_opcion() -> void:
 		0: # JUGAR -> Inicia la escena de City
 			get_tree().change_scene_to_file("res://EscenaComic.tscn")
 		1: # CARGAR PARTIDA
+			cargar_estado_juego()
 			print("Cargar partida seleccionado")
 		2: # OPCIONES
 			print("Opciones seleccionado")
@@ -146,3 +147,29 @@ func mover_oliver_fondo(delta: float) -> void:
 			anim_oliver.flip_h = false
 		elif anim_player_oliver:
 			oliver.scale.x = abs(oliver.scale.x)
+
+# FUNCIÓN PARA CARGAR PARTIDA 
+func cargar_estado_juego() -> void:
+	# La ruta 'user://' es la carpeta segura donde Godot guarda los datos en cualquier sistema operativo
+	var ruta_guardado = "user://partida_oliver.save"
+	
+	if FileAccess.file_exists(ruta_guardado):
+		var archivo = FileAccess.open(ruta_guardado, FileAccess.READ)
+		var datos_partida = archivo.get_var() # Recupera el diccionario guardado
+		archivo.close()
+		
+		print("Partida encontrada y cargada: ", datos_partida)
+		
+		# IMPORTANTE: Aquí pasas los datos a tu Singleton/Autoload (ej. Global.gd)
+		# Si tienes un script Global, descomenta la siguiente línea:
+		# Global.datos_jugador = datos_partida
+		
+		# Cambiar a la escena que estaba guardada, o a un nivel por defecto si no existe
+		if datos_partida.has("escena_actual"):
+			get_tree().change_scene_to_file(datos_partida["escena_actual"])
+		else:
+			print("El archivo existe pero no tiene escena guardada. Cargando inicio...")
+			get_tree().change_scene_to_file("res://EscenaComic.tscn")
+			
+	else:
+		print("No hay partida guardada aún.")
