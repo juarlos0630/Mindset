@@ -5,9 +5,17 @@ const ESCENA_SIGUIENTE = "res://ParadaPelea.tscn"
 const DIALOGOS = preload("res://dialogos/ballooon.dialogue")
 
 func _ready() -> void:
+	# 1. Escala y pisada calibrada del Conductor ANTES del primer frame para que no caiga
+	$Conductor.scale = Vector2(0.45, 0.45)
+	$Conductor/AnimatedSprite2D.scale = Vector2(2.6, 2.6)
+	$Conductor/AnimatedSprite2D.position.y = 240
+	$Conductor.position.y += 180   # Ajusta este número (ej. 175 o 185) para dejar sus pies al ras del piso
+	
+	$Conductor.toco_a_oliver.connect(_on_conductor_toco_a_oliver)
+
 	await get_tree().process_frame
 	
-	# 1. Cámara
+	# 2. Cámara
 	var cam = $Oliver/Camera2D
 	cam.enabled = true
 	cam.make_current()
@@ -17,13 +25,6 @@ func _ready() -> void:
 	cam.limit_right = 1005
 	cam.limit_top = -10
 	cam.limit_bottom = 642
-	
-	# 2. Escala y pisada calibrada del Conductor
-	$Conductor.scale = Vector2(0.45, 0.45)
-	$Conductor/AnimatedSprite2D.scale = Vector2(2.6, 2.6)
-	$Conductor/AnimatedSprite2D.position.y = 240
-	
-	$Conductor.toco_a_oliver.connect(_on_conductor_toco_a_oliver)
 	
 	# 3. Secuencia cinemática con la burbuja flotando sobre el Conductor
 	await get_tree().create_timer(0.8).timeout

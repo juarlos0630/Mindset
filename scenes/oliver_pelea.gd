@@ -1,11 +1,14 @@
 extends "res://scripts/player.gd"   # <- pon aquí TU ruta
 
 @export var vida_maxima: int = 100
+@export var golpes_para_morir: int = 8        # 8 golpes vacían los 4 tramos de BarraVida
+@export var fuerza_retroceso: float = 340.0   # empuje hacia atrás al recibir impacto en Nivel 2
+
 var vida: int = 100
 var recibiendo_dano: bool = false
 var esta_muerto: bool = false
 
-# --- Nodos de UI en ParadaPelea ---
+# --- Nodos de UI ---
 @onready var barra_vida: AnimatedSprite2D = $"../CanvasLayer/BarraVida"
 @onready var barra_dash: AnimatedSprite2D = $"../CanvasLayer/BarraDash"
 @onready var game_over_screen: TextureRect = $"../CanvasLayer/GameOverScreen"
@@ -73,7 +76,7 @@ func actualizar_barra_dash() -> void:
 	barra_dash.frame = clamp(nuevo_frame, 0, 5)
 
 
-func recibir_dano(cantidad: int) -> void:
+func recibir_dano(cantidad: int, extra = null) -> void:
 	if recibiendo_dano or esta_muerto:
 		return
 	vida -= cantidad
@@ -83,11 +86,26 @@ func recibir_dano(cantidad: int) -> void:
 	recibiendo_dano = true
 	is_attacking = false
 	is_dashing = false
+
+	# Retroceso al impactar en Nivel 2 (sin alterar ParadaPelea)
+	var dir_retroceso: float = 0.0
+	if extra is float or extra is int:
+		dir_retroceso = signf(global_position.x - float(extra))
+	elif extra is Vector2:
+		dir_retroceso = signf(global_position.x - extra.x)
+	else:
+		var jefe_nivel2 := get_tree().get_first_node_in_group("jefe") as Node2D
+		if jefe_nivel2:
+			dir_retroceso = signf(global_position.x - jefe_nivel2.global_position.x)
+
+	if dir_retroceso != 0.0:
+		velocity.x = dir_retroceso * fuerza_retroceso
+
 	animated_sprite.play("dano_oliver")
 	await get_tree().create_timer(0.4).timeout
 	recibiendo_dano = false
 	
-	if vida <= 0:
+	if vida <= 0 or golpes_recibidos >= golpes_para_morir:
 		mostrar_game_over()
 
 
@@ -102,6 +120,7 @@ func mostrar_game_over() -> void:
 	if esta_muerto:
 		return
 	esta_muerto = true
+	Engine.time_scale = 1.0
 	
 	if is_time_slowed:
 		deactivate_bullet_time()

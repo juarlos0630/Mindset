@@ -16,8 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://df61mf0jctmi3" path="res://scenes/Menu de inicio/letras_menu0002.png" id="12_y8j3h"]
 [ext_resource type="Texture2D" uid="uid://cm7cbit7c2lb3" path="res://scenes/Menu de inicio/letras_menu0003.png" id="13_qwn52"]
 [ext_resource type="Texture2D" uid="uid://2jv8omq5o31o" path="res://scenes/Menu de inicio/letras_menu0004.png" id="14_o2enq"]
-[ext_resource type="Texture2D" uid="uid://kjg50jxudjn2" path="res://scenes/Menu de inicio/titulo_menu.png" id="15_x128n"]
 [ext_resource type="Texture2D" uid="uid://bjlo566oya2lj" path="res://scenes/Menu de inicio/seleccion_menu.png" id="16_8tmke"]
+[ext_resource type="Texture2D" uid="uid://cdd3234273k6t" path="res://assets/menu_juego.png" id="17_y8j3h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gmpof"]
 texture = ExtResource("2_ht1qv")
@@ -449,9 +449,9 @@ scale = Vector2(0.45, 0.45)
 texture = ExtResource("14_o2enq")
 
 [node name="TituloMenu" type="Sprite2D" parent="." unique_id=623790878]
-position = Vector2(608, 80)
-scale = Vector2(0.53997093, 0.5)
-texture = ExtResource("15_x128n")
+position = Vector2(604, 84)
+scale = Vector2(0.216, 0.2)
+texture = ExtResource("17_y8j3h")
 
 [node name="SeleccionMenu" type="Sprite2D" parent="." unique_id=1450237519]
 position = Vector2(437, 193.00002)

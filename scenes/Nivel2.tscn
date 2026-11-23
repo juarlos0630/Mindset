@@ -1,0 +1,261 @@
+[gd_scene format=3 uid="uid://420kk4ltxov"]
+
+[ext_resource type="Texture2D" uid="uid://bqxsmgjghhk8p" path="res://scenes/nivel2/assets_nivel2/mapa_nivel2.png" id="1_wgh4u"]
+[ext_resource type="Texture2D" uid="uid://ojnrxg63vjfc" path="res://scenes/nivel2/assets_nivel2/azulejo_nivel2.png" id="2_ya7eb"]
+[ext_resource type="Texture2D" uid="uid://64nxfjmhn7m4" path="res://scenes/nivel2/assets_nivel2/pared_nivel2.png" id="3_dwsjk"]
+[ext_resource type="Texture2D" uid="uid://64tsi0b4xev6" path="res://scenes/nivel2/assets_nivel2/piso_destruido_nivel2.png" id="4_ap1ev"]
+[ext_resource type="Texture2D" uid="uid://coi1ba5klxw1e" path="res://scenes/nivel2/assets_nivel2/techo_nivel2.png" id="5_tegs8"]
+[ext_resource type="Texture2D" uid="uid://b3k5n1xm0ckyw" path="res://scenes/nivel2/assets_nivel2/ventana_nivel2.png" id="6_ud0v1"]
+[ext_resource type="Texture2D" uid="uid://n65ttes8h63q" path="res://scenes/nivel2/assets_nivel2/piso_nivel2.png" id="7_2upu4"]
+[ext_resource type="PackedScene" uid="uid://d3o55veufvc0r" path="res://scenes/nivel2/jefe_2.tscn" id="8_ii7vr"]
+[ext_resource type="PackedScene" uid="uid://b1k88xhy370j2" path="res://scenes/oliver.tscn" id="9_ykhed"]
+[ext_resource type="Script" uid="uid://yitnhes4t4js" path="res://scenes/oliver_pelea.gd" id="10_ya7eb"]
+[ext_resource type="Texture2D" uid="uid://c8rrf3cgdxpaj" path="res://assets/barra de vida/100.png" id="11_75j4y"]
+[ext_resource type="Texture2D" uid="uid://b7th523ccfgt3" path="res://assets/barra de vida/75.png" id="12_mtkvq"]
+[ext_resource type="Texture2D" uid="uid://dowqscc2vr18q" path="res://assets/barra de vida/50.png" id="13_0o87h"]
+[ext_resource type="Texture2D" uid="uid://brnjcwrk5gt7b" path="res://assets/barra de vida/25.png" id="14_77rho"]
+[ext_resource type="Texture2D" uid="uid://cn48i62sorrpf" path="res://assets/barra de vida/0.png" id="15_etjfg"]
+[ext_resource type="Texture2D" uid="uid://dyqupmd7awgo4" path="res://assets/dash_oliver/oliver_dash_0001.png" id="16_hogrn"]
+[ext_resource type="Texture2D" uid="uid://kmr1se06m5qn" path="res://scenes/nivel2/barra de vida_jefe2/barra de vida_jefe2_0001.png" id="16_tf3yt"]
+[ext_resource type="Texture2D" uid="uid://x1syuhnfnn8t" path="res://assets/dash_oliver/oliver_dash_0002.png" id="17_tglsu"]
+[ext_resource type="Texture2D" uid="uid://bqie5u34a6uhr" path="res://scenes/nivel2/barra de vida_jefe2/barra de vida_jefe2_0002.png" id="17_xob8g"]
+[ext_resource type="Texture2D" uid="uid://c2tenpap042as" path="res://scenes/nivel2/barra de vida_jefe2/barra de vida_jefe2_0003.png" id="18_0qid7"]
+[ext_resource type="Texture2D" uid="uid://bovq4ktqtwikl" path="res://assets/dash_oliver/oliver_dash_0003.png" id="18_tf3yt"]
+[ext_resource type="Texture2D" uid="uid://b1pq8otq4uhvb" path="res://scenes/nivel2/barra de vida_jefe2/barra de vida_jefe2_0004.png" id="19_p6s85"]
+[ext_resource type="Texture2D" uid="uid://bycmqj2nnda7u" path="res://assets/dash_oliver/oliver_dash_0004.png" id="19_xob8g"]
+[ext_resource type="Texture2D" uid="uid://budti0k7p3e6f" path="res://assets/dash_oliver/oliver_dash_0005.png" id="20_0qid7"]
+[ext_resource type="Texture2D" uid="uid://d0shkvk1iyrsj" path="res://scenes/nivel2/barra de vida_jefe2/barra de vida_jefe2_0005.png" id="20_at7fo"]
+[ext_resource type="Texture2D" uid="uid://dqth5mvyhlndn" path="res://scenes/nivel2/barra de vida_jefe2/barra de vida_jefe2_0006.png" id="21_k7spm"]
+[ext_resource type="Texture2D" uid="uid://bxcmh1sy8audm" path="res://assets/dash_oliver/oliver_dash_0006.png" id="21_p6s85"]
+[ext_resource type="Texture2D" uid="uid://briug4fmgq3oh" path="res://assets/game_over/game_over.png" id="22_at7fo"]
+[ext_resource type="Texture2D" uid="uid://ckhbva8o4ugfu" path="res://scenes/nivel2/barra de vida_jefe2/barra de vida_jefe2_0007.png" id="22_oqvwv"]
+[ext_resource type="Texture2D" uid="uid://s3i5720pg7rj" path="res://assets/win/ganaste.png" id="23_k7spm"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wghfh"]
+texture = ExtResource("2_ya7eb")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nd4xn"]
+texture = ExtResource("3_dwsjk")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_80obr"]
+texture = ExtResource("4_ap1ev")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s36aq"]
+texture = ExtResource("5_tegs8")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oht2y"]
+texture = ExtResource("6_ud0v1")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_75j4y"]
+texture = ExtResource("7_2upu4")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xgson"]
+sources/0 = SubResource("TileSetAtlasSource_wghfh")
+sources/1 = SubResource("TileSetAtlasSource_nd4xn")
+sources/2 = SubResource("TileSetAtlasSource_80obr")
+sources/3 = SubResource("TileSetAtlasSource_s36aq")
+sources/4 = SubResource("TileSetAtlasSource_oht2y")
+sources/5 = SubResource("TileSetAtlasSource_75j4y")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wgh4u"]
+distance = -553.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xgson"]
+b = Vector2(0, 682)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iyrkg"]
+b = Vector2(-1, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oqvwv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_75j4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mtkvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0o87h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_77rho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_etjfg")
+}],
+"loop": 2,
+"name": &"Vida",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iyrkg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_tf3yt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xob8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0qid7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_p6s85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_at7fo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_k7spm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_oqvwv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e2nex"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_hogrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tglsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tf3yt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_xob8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0qid7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_p6s85")
+}],
+"loop": 1,
+"name": &"Dash",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=168985785]
+
+[node name="MapaNivel2" type="Sprite2D" parent="." unique_id=855913362]
+position = Vector2(575.5, 324)
+scale = Vector2(0.363952, 0.48214287)
+texture = ExtResource("1_wgh4u")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=354889217]
+tile_set = SubResource("TileSet_xgson")
+
+[node name="Jefe2" parent="." unique_id=172711173 instance=ExtResource("8_ii7vr")]
+position = Vector2(971, 496)
+
+[node name="Oliver" parent="." unique_id=328371626 instance=ExtResource("9_ykhed")]
+position = Vector2(87, 480)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("10_ya7eb")
+vida_maxima = 100
+golpes_para_morir = 8
+fuerza_retroceso = 340.0
+dashes_maximos = 5
+tiempo_recarga_dash = 5.0
+SPEED = 350.0
+JUMP_VELOCITY = -600.0
+
+[node name="Camera2D" parent="Oliver" index="1" unique_id=1506584944]
+enabled = false
+editor_draw_screen = false
+
+[node name="AnimatedSprite2D" parent="Oliver" index="2" unique_id=1827422290]
+animation = &"jump"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1132704364]
+anchor_mode = 0
+zoom = Vector2(0.55, 0.55)
+
+[node name="SueloYParedes" type="StaticBody2D" parent="." unique_id=1896170041]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SueloYParedes" unique_id=2099611149]
+position = Vector2(58, 45)
+shape = SubResource("WorldBoundaryShape2D_wgh4u")
+
+[node name="pared1" type="CollisionShape2D" parent="SueloYParedes" unique_id=1756095158]
+shape = SubResource("SegmentShape2D_xgson")
+
+[node name="pared2" type="CollisionShape2D" parent="SueloYParedes" unique_id=162870538]
+position = Vector2(1078, 0)
+shape = SubResource("SegmentShape2D_iyrkg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=733860186]
+
+[node name="BarraVida" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=497473792]
+position = Vector2(59, 20)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_oqvwv")
+animation = &"Vida"
+
+[node name="BarraVidaJefe" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1156516467]
+position = Vector2(537.00006, 16)
+scale = Vector2(0.03, 0.03)
+sprite_frames = SubResource("SpriteFrames_iyrkg")
+
+[node name="BarraDash" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=195163643]
+position = Vector2(59, 20)
+scale = Vector2(0.049999997, 0.049999997)
+sprite_frames = SubResource("SpriteFrames_e2nex")
+animation = &"Dash"
+
+[node name="GameOverScreen" type="TextureRect" parent="CanvasLayer" unique_id=838813061]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_at7fo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="YouWinScreen" type="TextureRect" parent="CanvasLayer" unique_id=903883300]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_k7spm")
+expand_mode = 1
+stretch_mode = 5
+
+[editable path="Oliver"]
