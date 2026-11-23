@@ -73,7 +73,7 @@ func actualizar_barra_dash() -> void:
 	barra_dash.frame = clamp(nuevo_frame, 0, 5)
 
 
-func recibir_dano(cantidad: int) -> void:
+func recibir_dano(cantidad: int, desde_x = null) -> void:
 	if recibiendo_dano or esta_muerto:
 		return
 	vida -= cantidad

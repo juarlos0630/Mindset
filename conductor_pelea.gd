@@ -258,4 +258,4 @@ func mostrar_victoria() -> void:
 		await tween.finished
 	
 	await get_tree().create_timer(2.0).timeout
-	get_tree().change_scene_to_file("res://menu_inicio.tscn")
+	get_tree().change_scene_to_file("res://scenes/Nivel3/escenafinal.tscn")

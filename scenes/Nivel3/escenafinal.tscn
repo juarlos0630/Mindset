@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c15no52x1bgfu"]
+
+[ext_resource type="Script" uid="uid://oex0j4b6cvkf" path="res://escenafinal.gd" id="1_cfd68"]
+[ext_resource type="Texture2D" uid="uid://bcpukxbbmgsqj" path="res://scenes/Nivel3/pagina_final.jpg" id="1_e8vp3"]
+
+[node name="escenafinal" type="Control" unique_id=1519696174]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cfd68")
+paginas_comic = Array[Texture2D]([ExtResource("1_e8vp3")])
+ruta_siguiente_nivel = "uid://dws8s7nu6saby"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2016900090]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=137884769]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_e8vp3")
+expand_mode = 1
+stretch_mode = 5
