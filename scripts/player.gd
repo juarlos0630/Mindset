@@ -53,6 +53,12 @@ func _process(delta):
 			deactivate_bullet_time()
 
 func _physics_process(delta):
+	if oliver_danado:
+		velocity.x = move_toward(velocity.x, 0.0, 600.0 * delta)
+		if not is_on_floor():
+			velocity.y += gravity * delta
+		move_and_slide()
+		return
 	#Cooldown del dash
 	if dash_cooldown_timer > 0.0:
 		dash_cooldown_timer -= delta
@@ -171,12 +177,16 @@ func deactivate_bullet_time():
 	mapple.visible = true
 	
 #-------------------------------------------------------------------------------------------------------------------
-func recibir_dano(cantidad: int) -> void:
+func recibir_dano(cantidad: int, desde_x = null) -> void:
 	if oliver_danado or is_dashing:
 		return
 	oliver_danado = true
 	is_attacking = false
 	vida_oliver -= cantidad
+	var lado = 1.0 if animated_sprite.flip_h else -1.0
+	if desde_x != null and desde_x != global_position.x:
+		lado = sign(global_position.x - desde_x)
+	velocity = Vector2(lado * 260.0, -180.0)
 	animated_sprite.stop()
 	animated_sprite.play("daño")
 	# El parámetro "true" ignora el Bullet Time para que el aturdimiento siempre dure 0.45s reales

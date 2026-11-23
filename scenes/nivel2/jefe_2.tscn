@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://d3o55veufvc0r"]
+
+[ext_resource type="Texture2D" uid="uid://bq83stiego5a8" path="res://assets/sprites/jefe_2/caminar/frame1_0002.png" id="1_42r45"]
+[ext_resource type="Script" uid="uid://cxh7ahh5kl10n" path="res://scripts/jefe2.gd" id="1_qawx7"]
+[ext_resource type="Texture2D" uid="uid://cdf8ie70p4apm" path="res://assets/sprites/jefe_2/caminar/frame1_0003.png" id="2_e7so7"]
+[ext_resource type="PackedScene" path="res://scenes/nivel2/Cereal.tscn" id="2_kaank"]
+[ext_resource type="Texture2D" uid="uid://de4jq8jg52f2n" path="res://assets/sprites/jefe_2/caminar/frame1_0004.png" id="3_qawx7"]
+[ext_resource type="Texture2D" uid="uid://c1wgop11ry612" path="res://assets/sprites/jefe_2/caminar/frame1_0005.png" id="4_kaank"]
+[ext_resource type="Texture2D" uid="uid://brfmbmecre4rh" path="res://assets/sprites/jefe_2/caminar/frame1_0006.png" id="5_b1hnb"]
+[ext_resource type="Texture2D" uid="uid://bqx200dwje0dn" path="res://assets/sprites/jefe_2/caminar/frame1_0007.png" id="6_p1hpv"]
+[ext_resource type="Texture2D" uid="uid://crf4087vcodya" path="res://assets/sprites/jefe_2/caminar/frame1_0008.png" id="7_tj5j2"]
+[ext_resource type="Texture2D" uid="uid://cmoi2lgp3vk32" path="res://assets/sprites/jefe_2/caminar/frame1_0009.png" id="8_rduud"]
+[ext_resource type="Texture2D" uid="uid://couibkfs2pqvc" path="res://assets/sprites/jefe_2/daño/frame1_0002.png" id="9_ujrtm"]
+[ext_resource type="Texture2D" uid="uid://bme3w3r70ff3a" path="res://assets/sprites/jefe_2/daño/frame1_0003.png" id="10_2v7t8"]
+[ext_resource type="Texture2D" uid="uid://cx67xbwmgsiak" path="res://assets/sprites/jefe_2/daño/frame1_0004.png" id="11_3u558"]
+[ext_resource type="Texture2D" uid="uid://4fatlc0h8gpr" path="res://assets/sprites/jefe_2/daño/frame1_0005.png" id="12_nusgs"]
+[ext_resource type="Texture2D" uid="uid://ckl0ubg63depn" path="res://assets/sprites/jefe_2/daño/frame1_0006.png" id="13_dbumo"]
+[ext_resource type="Texture2D" uid="uid://dhjxdn2r0rbkt" path="res://assets/sprites/jefe_2/daño/frame1_0007.png" id="14_soc1d"]
+[ext_resource type="Texture2D" uid="uid://brg02qhx57iys" path="res://assets/sprites/jefe_2/daño/frame1_0008.png" id="15_jdf5m"]
+[ext_resource type="Texture2D" uid="uid://d3kescvs1qf4d" path="res://assets/sprites/jefe_2/daño/frame1_0009.png" id="16_ej6rf"]
+[ext_resource type="Texture2D" uid="uid://dvgk6oc6crk6n" path="res://assets/sprites/jefe_2/disparo/frame1_0003.png" id="17_lne2v"]
+[ext_resource type="Texture2D" uid="uid://cx1jeytqn5pwp" path="res://assets/sprites/jefe_2/disparo/frame1_0004.png" id="18_e8ral"]
+[ext_resource type="Texture2D" uid="uid://1xrju7wj1wfr" path="res://assets/sprites/jefe_2/disparo/frame1_0005.png" id="19_nptqw"]
+[ext_resource type="Texture2D" uid="uid://cif3spvqux6uj" path="res://assets/sprites/jefe_2/disparo/frame1_0006.png" id="20_qrrhj"]
+[ext_resource type="Texture2D" uid="uid://cys7ogpv144uu" path="res://assets/sprites/jefe_2/disparo/frame1_0007.png" id="21_iyq3c"]
+[ext_resource type="Texture2D" uid="uid://dgntlj1jdufc5" path="res://assets/sprites/jefe_2/disparo/frame1_0008.png" id="22_j2r3m"]
+[ext_resource type="Texture2D" uid="uid://33n4h7d5laow" path="res://assets/sprites/jefe_2/disparo/frame1_0009.png" id="23_3g8xf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u5bk5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_42r45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e7so7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qawx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kaank")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b1hnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p1hpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tj5j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rduud")
+}],
+"loop": 1,
+"name": &"caminar",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ujrtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2v7t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3u558")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nusgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dbumo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_soc1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jdf5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ej6rf")
+}],
+"loop": 0,
+"name": &"dano",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_lne2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_e8ral")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_nptqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_qrrhj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_iyq3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_j2r3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_3g8xf")
+}],
+"loop": 0,
+"name": &"disparo",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_ej6rf")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kddjp"]
+size = Vector2(94, 133)
+
+[node name="Jefe2" type="CharacterBody2D" unique_id=172711173]
+script = ExtResource("1_qawx7")
+cereal_scene = ExtResource("2_kaank")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=820028832]
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_u5bk5")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=277029818]
+position = Vector2(3, -9.5)
+shape = SubResource("RectangleShape2D_kddjp")
+
+[node name="PuntoDisparo" type="Marker2D" parent="." unique_id=1449013397]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=663726712]
