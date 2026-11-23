@@ -1,12 +1,12 @@
 [gd_scene format=4 uid="uid://da0phjbs78xci"]
 
-[ext_resource type="Texture2D" uid="uid://crk4f01wewt5n" path="res://assets/assets/city/GandalfHardcore City Tiles/City background sky.png" id="1_khkt5"]
+[ext_resource type="Texture2D" uid="uid://crk4f01wewt5n" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/City background sky.png" id="1_khkt5"]
 [ext_resource type="Script" uid="uid://xeid71mj13vd" path="res://city.gd" id="1_wymd4"]
-[ext_resource type="Texture2D" uid="uid://c34tenslgrvlx" path="res://assets/assets/city/GandalfHardcore City Tiles/City background layer1.png" id="2_levc3"]
-[ext_resource type="Texture2D" uid="uid://d3e5offupg356" path="res://assets/assets/city/GandalfHardcore City Tiles/City background layer2.png" id="3_2spp0"]
-[ext_resource type="Texture2D" uid="uid://bvcd5vubeuxo3" path="res://assets/assets/city/GandalfHardcore City Tiles/Decoration 32x32.png" id="4_levc3"]
-[ext_resource type="Texture2D" uid="uid://d3xlq4ntle8jb" path="res://assets/assets/city/GandalfHardcore City Tiles/Building Tiles 32x32.png" id="4_wymd4"]
-[ext_resource type="Texture2D" uid="uid://dgpwmxel5nb84" path="res://assets/assets/city/GandalfHardcore City Tiles/GandalfHardcore city tiles 32x32.png" id="5_mk5cs"]
+[ext_resource type="Texture2D" uid="uid://c34tenslgrvlx" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/City background layer1.png" id="2_levc3"]
+[ext_resource type="Texture2D" uid="uid://d3e5offupg356" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/City background layer2.png" id="3_2spp0"]
+[ext_resource type="Texture2D" uid="uid://bvcd5vubeuxo3" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/Decoration 32x32.png" id="4_levc3"]
+[ext_resource type="Texture2D" uid="uid://d3xlq4ntle8jb" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/Building Tiles 32x32.png" id="4_wymd4"]
+[ext_resource type="Texture2D" uid="uid://dgpwmxel5nb84" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/GandalfHardcore city tiles 32x32.png" id="5_mk5cs"]
 [ext_resource type="PackedScene" uid="uid://b1k88xhy370j2" path="res://scenes/oliver.tscn" id="7_2spp0"]
 [ext_resource type="PackedScene" uid="uid://cd3kjm3xrry7i" path="res://scenes/camion.tscn" id="9_mk5cs"]
 

@@ -1,26 +1,39 @@
 [gd_scene format=4 uid="uid://ddmm8gr3opsmm"]
 
 [ext_resource type="Script" uid="uid://byal3yybmuiq8" path="res://parada_pelea.gd" id="1_a1y2h"]
-[ext_resource type="Texture2D" uid="uid://crk4f01wewt5n" path="res://assets/assets/city/GandalfHardcore City Tiles/City background sky.png" id="1_trop6"]
-[ext_resource type="Texture2D" uid="uid://c34tenslgrvlx" path="res://assets/assets/city/GandalfHardcore City Tiles/City background layer1.png" id="2_ky2u8"]
+[ext_resource type="Texture2D" uid="uid://crk4f01wewt5n" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/City background sky.png" id="1_trop6"]
+[ext_resource type="Texture2D" uid="uid://c34tenslgrvlx" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/City background layer1.png" id="2_ky2u8"]
 [ext_resource type="Texture2D" uid="uid://bsh55xna5314y" path="res://scenes/Nivel3/situx_morado.png" id="2_qm58k"]
-[ext_resource type="Texture2D" uid="uid://d3e5offupg356" path="res://assets/assets/city/GandalfHardcore City Tiles/City background layer2.png" id="3_6fytc"]
-[ext_resource type="Texture2D" uid="uid://bvcd5vubeuxo3" path="res://assets/assets/city/GandalfHardcore City Tiles/Decoration 32x32.png" id="4_qm58k"]
-[ext_resource type="Texture2D" uid="uid://d3xlq4ntle8jb" path="res://assets/assets/city/GandalfHardcore City Tiles/Building Tiles 32x32.png" id="5_a1y2h"]
-[ext_resource type="Texture2D" uid="uid://dgpwmxel5nb84" path="res://assets/assets/city/GandalfHardcore City Tiles/GandalfHardcore city tiles 32x32.png" id="6_ed1b4"]
+[ext_resource type="Texture2D" uid="uid://d3e5offupg356" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/City background layer2.png" id="3_6fytc"]
+[ext_resource type="Texture2D" uid="uid://bvcd5vubeuxo3" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/Decoration 32x32.png" id="4_qm58k"]
+[ext_resource type="Texture2D" uid="uid://d3xlq4ntle8jb" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/Building Tiles 32x32.png" id="5_a1y2h"]
+[ext_resource type="Texture2D" uid="uid://dgpwmxel5nb84" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/GandalfHardcore city tiles 32x32.png" id="6_ed1b4"]
 [ext_resource type="PackedScene" uid="uid://b1k88xhy370j2" path="res://scenes/oliver.tscn" id="7_c87ay"]
-[ext_resource type="Texture2D" uid="uid://to6u68jysymk" path="res://assets/assets/city/GandalfHardcore City Tiles/parada_autobus.png" id="7_ky2u8"]
-[ext_resource type="Texture2D" uid="uid://djxxrhqh1ykwp" path="res://assets/assets/city/GandalfHardcore City Tiles/autopista_autobus.png" id="8_6fytc"]
+[ext_resource type="Texture2D" uid="uid://to6u68jysymk" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/parada_autobus.png" id="7_ky2u8"]
+[ext_resource type="Texture2D" uid="uid://djxxrhqh1ykwp" path="res://assets/assets/assets_probables/city/GandalfHardcore City Tiles/autopista_autobus.png" id="8_6fytc"]
+[ext_resource type="Texture2D" uid="uid://briug4fmgq3oh" path="res://assets/game_over/game_over.png" id="8_d4vv7"]
 [ext_resource type="PackedScene" uid="uid://cd3kjm3xrry7i" path="res://scenes/camion.tscn" id="8_svdwb"]
+[ext_resource type="Texture2D" uid="uid://dyqupmd7awgo4" path="res://assets/dash_oliver/oliver_dash_0001.png" id="9_70488"]
+[ext_resource type="Texture2D" uid="uid://x1syuhnfnn8t" path="res://assets/dash_oliver/oliver_dash_0002.png" id="10_byath"]
+[ext_resource type="Texture2D" uid="uid://bovq4ktqtwikl" path="res://assets/dash_oliver/oliver_dash_0003.png" id="11_la1ws"]
 [ext_resource type="Script" uid="uid://yitnhes4t4js" path="res://scenes/oliver_pelea.gd" id="11_oaifh"]
+[ext_resource type="Texture2D" uid="uid://bycmqj2nnda7u" path="res://assets/dash_oliver/oliver_dash_0004.png" id="12_oaifh"]
+[ext_resource type="Texture2D" uid="uid://budti0k7p3e6f" path="res://assets/dash_oliver/oliver_dash_0005.png" id="13_l2vtj"]
 [ext_resource type="Script" uid="uid://dechfkxpibbnm" path="res://conductor_pelea.gd" id="13_la1ws"]
+[ext_resource type="Texture2D" uid="uid://bxcmh1sy8audm" path="res://assets/dash_oliver/oliver_dash_0006.png" id="14_4ulo4"]
 [ext_resource type="Texture2D" uid="uid://dw8i5n3bdj1rw" path="res://assets/sprites/jefe_3/golpe_jefe/sin título_0002.png" id="14_oaifh"]
+[ext_resource type="Texture2D" uid="uid://c2yxo1rrys3t3" path="res://assets/barra de vida_jefe/barra de vida_conductor_0001.png" id="14_xp13g"]
+[ext_resource type="Texture2D" uid="uid://do2ujtlmxn1u" path="res://assets/barra de vida_jefe/barra de vida_conductor_0002.png" id="15_h2p15"]
 [ext_resource type="Texture2D" uid="uid://11rckjn5an3e" path="res://assets/sprites/jefe_3/golpe_jefe/sin título_0003.png" id="15_l2vtj"]
 [ext_resource type="Texture2D" uid="uid://c841v16eboy0q" path="res://assets/sprites/jefe_3/golpe_jefe/sin título_0004.png" id="16_4ulo4"]
+[ext_resource type="Texture2D" uid="uid://b5w6nrax3d4bc" path="res://assets/barra de vida_jefe/barra de vida_conductor_0003.png" id="16_yjwra"]
+[ext_resource type="Texture2D" uid="uid://c1dp2gd4oiw61" path="res://assets/barra de vida_jefe/barra de vida_conductor_0004.png" id="17_illph"]
 [ext_resource type="Texture2D" uid="uid://dan122wowj4y2" path="res://assets/sprites/jefe_3/golpe_jefe/sin título_0005.png" id="17_xp13g"]
+[ext_resource type="Texture2D" uid="uid://ds4e707bl2dfl" path="res://assets/barra de vida_jefe/barra de vida_conductor_0005.png" id="18_4oqv6"]
 [ext_resource type="Texture2D" uid="uid://bmvxnbyfvkju2" path="res://assets/sprites/jefe_3/golpe_jefe/sin título_0006.png" id="18_h2p15"]
 [ext_resource type="Texture2D" uid="uid://do2chdhqfwxj3" path="res://assets/sprites/jefe_3/golpe_jefe/sin título_0007.png" id="19_yjwra"]
 [ext_resource type="Texture2D" uid="uid://bdi3ah7r1cfpk" path="res://assets/sprites/jefe_3/golpe_jefe/sin título_0008.png" id="20_illph"]
+[ext_resource type="Texture2D" uid="uid://s3i5720pg7rj" path="res://assets/win/ganaste.png" id="20_xp13g"]
 [ext_resource type="Texture2D" uid="uid://bmbrg516fdmwl" path="res://assets/sprites/jefe_3/golpe_jefe/sin título_0009.png" id="21_4oqv6"]
 [ext_resource type="Texture2D" uid="uid://1vwu1ge4x4i0" path="res://assets/sprites/jefe_3/golpe_jefe/sin título_0010.png" id="22_l5kn6"]
 [ext_resource type="Texture2D" uid="uid://dx3sf80curnry" path="res://assets/sprites/jefe_3/golpe_jefe/sin título_0011.png" id="23_k5g7k"]
@@ -169,11 +182,16 @@
 [ext_resource type="Texture2D" uid="uid://b45hlposodyf" path="res://assets/sprites/jefe_3/salto_jefe/frame_0046.png" id="181_jnsbd"]
 [ext_resource type="Texture2D" uid="uid://bbit8bx3yuk1r" path="res://assets/sprites/jefe_3/salto_jefe/frame_0047.png" id="182_tvagn"]
 [ext_resource type="Texture2D" uid="uid://cbq6ebs3kv2bd" path="res://assets/sprites/jefe_3/salto_jefe/frame_0048.png" id="183_rkhgm"]
+[ext_resource type="Texture2D" uid="uid://c8rrf3cgdxpaj" path="res://assets/barra de vida/100.png" id="184_1f03i"]
 [ext_resource type="Texture2D" uid="uid://dq5dc8h36vetm" path="res://assets/sprites/jefe_3/salto_jefe/frame_0049.png" id="184_8wwr3"]
 [ext_resource type="Texture2D" uid="uid://c7da4gtrb08tq" path="res://assets/sprites/jefe_3/salto_jefe/frame_0050.png" id="185_6kj5x"]
+[ext_resource type="Texture2D" uid="uid://b7th523ccfgt3" path="res://assets/barra de vida/75.png" id="185_v1naw"]
+[ext_resource type="Texture2D" uid="uid://dowqscc2vr18q" path="res://assets/barra de vida/50.png" id="186_d4vv7"]
 [ext_resource type="Texture2D" uid="uid://tuh1w0l8kr5y" path="res://assets/sprites/jefe_3/salto_jefe/frame_0051.png" id="186_hu78c"]
 [ext_resource type="Texture2D" uid="uid://bfxbc2jslp1uw" path="res://assets/sprites/jefe_3/salto_jefe/frame_0052.png" id="187_slmyc"]
+[ext_resource type="Texture2D" uid="uid://brnjcwrk5gt7b" path="res://assets/barra de vida/25.png" id="187_xxoxx"]
 [ext_resource type="Texture2D" uid="uid://crdvvqaestd3a" path="res://assets/sprites/jefe_3/salto_jefe/frame_0053.png" id="188_0f2gc"]
+[ext_resource type="Texture2D" uid="uid://cn48i62sorrpf" path="res://assets/barra de vida/0.png" id="188_yqjcg"]
 [ext_resource type="Texture2D" uid="uid://dis21ib6em05b" path="res://assets/sprites/jefe_3/salto_jefe/frame_0054.png" id="189_ghya5"]
 [ext_resource type="Texture2D" uid="uid://d4jun17go5lpp" path="res://assets/sprites/jefe_3/salto_jefe/frame_0055.png" id="190_ul8rq"]
 [ext_resource type="Texture2D" uid="uid://bjrw684owuyuw" path="res://assets/sprites/jefe_3/salto_jefe/frame_0056.png" id="191_yltwd"]
@@ -183,6 +201,78 @@
 [ext_resource type="Texture2D" uid="uid://difljgix5uqvf" path="res://assets/sprites/jefe_3/salto_jefe/frame_0060.png" id="195_wmcuc"]
 [ext_resource type="Texture2D" uid="uid://cbt1lhepevod" path="res://assets/sprites/jefe_3/salto_jefe/frame_0061.png" id="196_88x36"]
 [ext_resource type="Texture2D" uid="uid://c14x5pejlgb16" path="res://assets/sprites/jefe_3/salto_jefe/frame_0062.png" id="197_ngyw4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xgson"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("184_1f03i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_v1naw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_d4vv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_xxoxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_yqjcg")
+}],
+"loop": 2,
+"name": &"Vida",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iyrkg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_70488")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_byath")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_la1ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oaifh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_l2vtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4ulo4")
+}],
+"loop": 1,
+"name": &"Dash",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epxnn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_xp13g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_h2p15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_yjwra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_illph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_4oqv6")
+}],
+"loop": 2,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6fytc"]
 texture = ExtResource("4_qm58k")
@@ -1098,6 +1188,47 @@ position = Vector2(0, -45.5)
 scale = Vector2(1, 1.2630059)
 texture = ExtResource("1_trop6")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=406744272]
+
+[node name="BarraVida" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=142989723]
+position = Vector2(59, 20)
+scale = Vector2(0.05, 0.05)
+sprite_frames = SubResource("SpriteFrames_xgson")
+animation = &"Vida"
+
+[node name="BarraDash" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1246750295]
+position = Vector2(59, 20)
+scale = Vector2(0.049999997, 0.049999997)
+sprite_frames = SubResource("SpriteFrames_iyrkg")
+animation = &"Dash"
+
+[node name="BarraConductor" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=1845579048]
+position = Vector2(540, 20)
+scale = Vector2(0.045, 0.045)
+sprite_frames = SubResource("SpriteFrames_epxnn")
+
+[node name="GameOverScreen" type="TextureRect" parent="CanvasLayer" unique_id=1890173795]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_d4vv7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="YouWinScreen" type="TextureRect" parent="CanvasLayer" unique_id=1340427461]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_xp13g")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1950287406]
 scroll_offset = Vector2(0, 8)
 
@@ -1123,6 +1254,8 @@ position = Vector2(-33, 133)
 scale = Vector2(0.2, 0.2)
 script = ExtResource("11_oaifh")
 vida_maxima = 100
+dashes_maximos = 5
+tiempo_recarga_dash = 5.0
 SPEED = 300.0
 JUMP_VELOCITY = -500.0
 
@@ -1289,6 +1422,4 @@ shape = SubResource("CapsuleShape2D_5onyk")
 position = Vector2(-304.25, 127.25353)
 scale = Vector2(0.25859374, 0.2664173)
 sprite_frames = SubResource("SpriteFrames_kddjp")
-animation = &"ataque"
-frame = 33
-frame_progress = 0.38427755
+animation = &"idle"

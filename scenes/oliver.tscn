@@ -669,8 +669,6 @@ shape = SubResource("CapsuleShape2D_5onyk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1827422290]
 sprite_frames = SubResource("SpriteFrames_xgson")
-animation = &"dano_oliver"
-frame_progress = 0.28307867
 
 [node name="Mapple" type="AnimatedSprite2D" parent="." unique_id=358634089]
 position = Vector2(116.00001, -123)

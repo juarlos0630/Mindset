@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var vida_maxima: int = 150
+@export var vida_maxima: int = 120   # 120 = 8 golpes de Oliver (15 c/u) para coincidir con los 4 tramos de 2 golpes
 @export var velocidad: float = 280.0
 @export var fuerza_salto: float = -540.0
 @export var gravedad: float = 980.0
@@ -26,8 +26,12 @@ extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var mi_colision: CollisionShape2D = $CollisionShape2D
+@onready var barra_conductor: AnimatedSprite2D = $"../CanvasLayer/BarraConductor"
+@onready var you_win_screen: TextureRect = $"../CanvasLayer/YouWinScreen"
 
 var vida_actual: int
+var golpes_recibidos: int = 0
+var jefe_derrotado: bool = false
 var oliver: Node2D = null
 var oliver_colision: Node2D = null
 var anim_oliver: AnimatedSprite2D = null
@@ -43,6 +47,11 @@ var cooldown_recibir := 0.0
 
 func _ready() -> void:
 	vida_actual = vida_maxima
+	if barra_conductor:
+		barra_conductor.frame = 0
+	if you_win_screen:
+		you_win_screen.modulate.a = 0.0
+		you_win_screen.visible = false
 	collision_layer = 2
 	collision_mask = 1
 	# Para que la animación de golpe termine y no se repita en bucle
@@ -97,6 +106,9 @@ func _reproducir(nombre: String) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	if jefe_derrotado:
+		return
+
 	if not is_on_floor():
 		velocity.y += gravedad * delta
 
@@ -156,7 +168,7 @@ func _atacar() -> void:
 
 	# Momento del impacto
 	await get_tree().create_timer(tiempo_impacto).timeout
-	if not is_instance_valid(oliver) or recibiendo_dano or not atacando:
+	if not is_instance_valid(oliver) or recibiendo_dano or not atacando or jefe_derrotado:
 		atacando = false
 		return
 
@@ -189,7 +201,7 @@ func _revisar_golpe_de_oliver() -> void:
 	if anim_oliver == null or anim_oliver.animation != "attack":
 		golpe_oliver_registrado = false
 		return
-	if golpe_oliver_registrado or cooldown_recibir > 0.0 or recibiendo_dano:
+	if golpe_oliver_registrado or cooldown_recibir > 0.0 or recibiendo_dano or jefe_derrotado:
 		return
 
 	var diff: Vector2 = _centro_yo() - _centro_oliver()
@@ -199,10 +211,14 @@ func _revisar_golpe_de_oliver() -> void:
 
 
 func _recibir_dano(cantidad: int, dir_empuje: float) -> void:
+	if jefe_derrotado:
+		return
 	cooldown_recibir = 0.6
 	recibiendo_dano = true
 	atacando = false
 	vida_actual -= cantidad
+	golpes_recibidos += 1
+	actualizar_barra_conductor()
 
 	_reproducir("dano_jefe")
 
@@ -212,4 +228,34 @@ func _recibir_dano(cantidad: int, dir_empuje: float) -> void:
 	recibiendo_dano = false
 
 	if vida_actual <= 0:
-		queue_free()
+		mostrar_victoria()
+
+
+func actualizar_barra_conductor() -> void:
+	if not barra_conductor:
+		return
+	# División entera entre 2: cada 2 golpes avanza al siguiente frame (0, 1, 2, 3, 4)
+	var nuevo_frame: int = golpes_recibidos / 2
+	barra_conductor.frame = clamp(nuevo_frame, 0, 4)
+
+
+func mostrar_victoria() -> void:
+	if jefe_derrotado:
+		return
+	jefe_derrotado = true
+	
+	# Ocultamos al Conductor y desactivamos su colisión al instante
+	anim.visible = false
+	mi_colision.set_deferred("disabled", true)
+	
+	# Restauramos la velocidad normal del juego por si se derrotó en Bullet Time
+	Engine.time_scale = 1.0
+	
+	if you_win_screen:
+		you_win_screen.visible = true
+		var tween := create_tween()
+		tween.tween_property(you_win_screen, "modulate:a", 1.0, 1.5)
+		await tween.finished
+	
+	await get_tree().create_timer(2.0).timeout
+	get_tree().change_scene_to_file("res://menu_inicio.tscn")
