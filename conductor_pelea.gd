@@ -258,4 +258,19 @@ func mostrar_victoria() -> void:
 		await tween.finished
 	
 	await get_tree().create_timer(2.0).timeout
-	get_tree().change_scene_to_file("res://menu_inicio.tscn")
+	
+	# --- 1. GUARDAMOS LA PARTIDA AQUÍ ---
+	guardar_partida("res://scenes/Nivel3/escenafinal.tscn")
+	
+	# --- 2. LUEGO CAMBIAMOS DE ESCENA ---
+	get_tree().change_scene_to_file("res://scenes/Nivel3/escenafinal.tscn")
+
+func guardar_partida(ruta_escena: String) -> void:
+	var datos_partida = {
+		"escena_actual": ruta_escena
+	}
+	
+	var archivo = FileAccess.open("user://partida_oliver.save", FileAccess.WRITE)
+	archivo.store_var(datos_partida)
+	archivo.close()
+	print("¡Partida guardada exitosamente! Nivel a cargar: ", ruta_escena)

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cbb0oidlrj2us"]
+
+[ext_resource type="Script" uid="uid://b0g7ksscde5dn" path="res://EscenaFinalNivel2.gd" id="1_d4dmv"]
+[ext_resource type="Texture2D" uid="uid://o3np0wj73p21" path="res://scenes/Nivel3/pagina_final_nivel2.jpg" id="2_okadr"]
+
+[node name="EscenaFinalNivel2" type="Control" unique_id=395296774]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d4dmv")
+paginas_comic = Array[Texture2D]([ExtResource("2_okadr")])
+ruta_siguiente_nivel = "uid://da0phjbs78xci"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=964390257]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1214605798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5

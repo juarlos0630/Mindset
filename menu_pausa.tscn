@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://43vi3q4twwuc"]
+
+[ext_resource type="Script" uid="uid://bev4p85xqm4lp" path="res://MenuPausa.gd" id="1_jd2x8"]
+
+[node name="MenuPausa" type="CanvasLayer" unique_id=1791709959]
+process_mode = 3
+script = ExtResource("1_jd2x8")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1222097859]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=304903426]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = -46.5
+offset_right = 72.5
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer" unique_id=359650439]
+layout_mode = 2
+text = "PAUSA"
+
+[node name="BotonReanudar" type="Button" parent="ColorRect/VBoxContainer" unique_id=1382199746]
+layout_mode = 2
+text = "REANUDAR"
+
+[node name="BotonMenu" type="Button" parent="ColorRect/VBoxContainer" unique_id=1427639813]
+layout_mode = 2
+text = "VOLVER AL MENÚ"

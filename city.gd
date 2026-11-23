@@ -1,6 +1,6 @@
 extends Node2D
 
-const ESCENA_SIGUIENTE = "res://scenes/main.tscn"
+const ESCENA_SIGUIENTE = "res://scenes/Nivel3/escena_conductor.tscn"
 const DIALOGOS = preload("res://dialogos/ballooon.dialogue")
 
 @export var rango_interaccion: float = 220.0
