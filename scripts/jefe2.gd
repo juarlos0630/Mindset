@@ -432,7 +432,17 @@ func _morir():
 	else:
 		await get_tree().create_timer(1.5).timeout
 
-	if escena_al_derrotar != "" and ResourceLoader.exists(escena_al_derrotar):
+	# ruta del comic
+	var ruta_comic_siguiente = "res://escena_final_nivel_2.tscn"
+	
+	# --- 2. GUARDAMOS LA PARTIDA ---
+	guardar_partida(ruta_comic_siguiente)
+
+	# --- 3. CAMBIAMOS DE ESCENA ---
+	if ResourceLoader.exists(ruta_comic_siguiente):
+		get_tree().change_scene_to_file(ruta_comic_siguiente)
+	elif escena_al_derrotar != "" and ResourceLoader.exists(escena_al_derrotar):
+		# Respaldo de seguridad por si acaso la escena del cómic no se encuentra
 		get_tree().change_scene_to_file(escena_al_derrotar)
 	else:
 		queue_free()
@@ -488,3 +498,13 @@ func _on_hitbox_body_entered(body):
 	if estado == Estado.CAMINAR and body.is_in_group("player"):
 		if body.has_method("recibir_dano"):
 			body.recibir_dano(1, global_position.x)
+
+func guardar_partida(ruta_escena: String) -> void:
+	var datos_partida = {
+		"escena_actual": ruta_escena
+	}
+	
+	var archivo = FileAccess.open("user://partida_oliver.save", FileAccess.WRITE)
+	archivo.store_var(datos_partida)
+	archivo.close()
+	print("¡Partida guardada exitosamente! Nivel a cargar: ", ruta_escena)
